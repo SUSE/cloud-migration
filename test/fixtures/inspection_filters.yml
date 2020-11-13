@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inspection: one
+  scope: MyString
+  definition: MyString
+  enable: false
+  description: MyString
+
+two:
+  inspection: two
+  scope: MyString
+  definition: MyString
+  enable: false
+  description: MyString

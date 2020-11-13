@@ -1,0 +1,5 @@
+{"aws_plan": {
+  "inspection_export_id": "1",
+  "description": "testing",
+  "salt_minion": "mtarget"
+}}

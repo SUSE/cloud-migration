@@ -1,0 +1,13 @@
+{"inspection": {
+    "scopes": [
+      "os", "users", "packages", "patterns", "repositories", "groups",
+      "services", "changed_config_files", "changed_managed_files",
+      "unmanaged_files"
+    ],
+    "notes": "Inspection notes blah blah blah",
+    "filters": [
+      {"scope": "unmanaged_files", "definition": "name=/etc/foo"},
+      {"scope": "unmanaged_files", "definition": "name=/root/bar"}
+    ]
+}}
+

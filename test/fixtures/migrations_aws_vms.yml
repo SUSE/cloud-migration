@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  instance_id: MyString
+  region: MyString
+  image_id: MyString
+  instance_type: MyString
+  key_name: MyString
+  subnet_id: MyString
+  security_id: MyString
+  availability_zone: MyString
+  vpc_id: MyString
+  iam_role: MyString
+  salt_minion: MyString
+
+two:
+  instance_id: MyString
+  region: MyString
+  image_id: MyString
+  instance_type: MyString
+  key_name: MyString
+  subnet_id: MyString
+  security_id: MyString
+  availability_zone: MyString
+  vpc_id: MyString
+  iam_role: MyString
+  salt_minion: MyString

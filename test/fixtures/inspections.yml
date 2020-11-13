@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  machine: one
+  scopes: MyText
+  description: MyString
+  notes: MyText
+  start: 2020-10-19 23:40:35
+
+two:
+  machine: two
+  scopes: MyText
+  description: MyString
+  notes: MyText
+  start: 2020-10-19 23:40:35

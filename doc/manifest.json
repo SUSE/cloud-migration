@@ -1,0 +1,120 @@
+{
+    "environment": {
+        "locale": "en_US.utf8",
+        "system_type": "remote"
+    },
+    "meta": {
+        "filters": {
+            "inspect": []
+        },
+        "format_version": 10,
+        "os": {
+            "hostname": "source",
+            "modified": "2020-10-21T23:19:04Z"
+        },
+        "users": {
+            "hostname": "source",
+            "modified": "2020-10-21T23:19:04Z"
+        }
+    },
+    "os": {
+        "architecture": "x86_64",
+        "name": "openSUSE Leap",
+        "version": "15.1"
+    },
+    "users": {
+        "_elements": [
+            {
+                "comment": "User for D-Bus",
+                "encrypted_password": "!",
+                "gid": 500,
+                "home": "/run/dbus",
+                "last_changed_date": 18477,
+                "name": "messagebus",
+                "password": "x",
+                "shell": "/usr/bin/false",
+                "uid": 500
+            },
+            {
+                "comment": "root",
+                "encrypted_password": "$1$xyz$37MAoBhNLQIFVbtUcfCUc/",
+                "gid": 0,
+                "home": "/root",
+                "last_changed_date": 18477,
+                "name": "root",
+                "password": "x",
+                "shell": "/bin/bash",
+                "uid": 0
+            },
+            {
+                "comment": "SSH daemon",
+                "encrypted_password": "!",
+                "gid": 482,
+                "home": "/var/lib/sshd",
+                "last_changed_date": 18477,
+                "name": "sshd",
+                "password": "x",
+                "shell": "/bin/false",
+                "uid": 482
+            },
+            {
+                "comment": "systemd Core Dumper",
+                "encrypted_password": "!!",
+                "gid": 485,
+                "home": "/",
+                "last_changed_date": 18477,
+                "name": "systemd-coredump",
+                "password": "x",
+                "shell": "/sbin/nologin",
+                "uid": 485
+            },
+            {
+                "comment": "systemd Network Management",
+                "encrypted_password": "!!",
+                "gid": 484,
+                "home": "/",
+                "last_changed_date": 18477,
+                "name": "systemd-network",
+                "password": "x",
+                "shell": "/sbin/nologin",
+                "uid": 484
+            },
+            {
+                "comment": "systemd Time Synchronization",
+                "encrypted_password": "!!",
+                "gid": 483,
+                "home": "/",
+                "last_changed_date": 18477,
+                "name": "systemd-timesync",
+                "password": "x",
+                "shell": "/sbin/nologin",
+                "uid": 483
+            },
+            {
+                "comment": "",
+                "encrypted_password": "$1$xyz$37MAoBhNLQIFVbtUcfCUc/",
+                "gid": 1000,
+                "home": "/home/vagrant",
+                "last_changed_date": 18477,
+                "max_days": 99999,
+                "min_days": 0,
+                "name": "vagrant",
+                "password": "x",
+                "shell": "/bin/bash",
+                "uid": 1000,
+                "warn_days": 7
+            },
+            {
+                "comment": "WWW daemon apache",
+                "encrypted_password": "!",
+                "gid": 480,
+                "home": "/var/lib/wwwrun",
+                "last_changed_date": 18549,
+                "name": "wwwrun",
+                "password": "x",
+                "shell": "/sbin/nologin",
+                "uid": 481
+            }
+        ]
+    }
+}

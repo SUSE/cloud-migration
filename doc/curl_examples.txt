@@ -1,0 +1,115 @@
+1. Create Machine
+
+curl -u admin:supersecret -H "Content-Type: application/json" -d @machine.json http://localhost:3000/v1/machines
+
+2. Delete Machine
+
+curl -u admin:supersecret -XDELETE http://localhost:3000/v1/machines/source
+
+3. Create Inspection
+
+curl -u admin:supersecret -H "Content-Type: application/json" -d @inspection.json http://localhost:3000/v1/machines/source/inspections
+
+4. List Inspections
+
+curl -u admin:supersecret http://localhost:3000/v1/machines/source/inspections
+
+5. Get Inspection
+
+curl -u admin:supersecret http://localhost:3000/v1/machines/source/inspections/16
+
+6. Delete Inspection
+
+curl -u admin:supersecret -XDELETE http://localhost:3000/v1/machines/source/inspections/16
+
+7. Get Manifest of an Inspection
+
+curl -u admin:supersecret http://localhost:3000/v1/machines/source/inspections/19/manifest
+
+8. Update Manifest of an Inspection
+
+curl -u admin:supersecret -XPUT -d @manifest.json -H "Content-Type: application/json" http://localhost:3000/v1/machines/source/inspections/19/manifest
+
+9. List default inspection filters
+
+curl -u admin:supersecret http://localhost:3000/v1/defaults/inspection/filters
+
+10. Show a given default inspection filter
+
+curl -u admin:supersecret http://localhost:3000/v1/defaults/inspection/filters/1
+
+11. Update a give default inspection filter
+
+curl -u admin:supersecret -XPATCH -d @update_default_inspection_filter.json -H "Content-Type: application/json" http://localhost:3000/v1/defaults/inspection/filters/1
+
+10. List custom inspection filters for a given inspection
+
+curl -u admin:supersecret http://localhost:3000/v1/machines/source/inspections/1/filters
+
+Note: Before executing the target VM REST API's, create a config.json in app/models folder with aws credentials like
+{"AccessKeyId": "<access key>", "SecretAccessKey": "<secret key>", "region": "us-east-2" } 
+If you want to use iam role to connect to aws, toggel the flag config.aws_iam_authentication in config/application.rb
+
+11. Create the target VM on AWS Cloud Provider
+
+curl -u admin:supersecret -H "Content-Type: application/json" -d @awsvm.json http://localhost:3000/v1/migrations/aws/vms
+
+12. List the target VMs 
+
+curl -u admin:supersecret http://localhost:3000/v1/migrations/aws/vms
+
+13. Get the target VM information
+
+curl -u admin:supersecret http://localhost:3000/v1/migrations/aws/vms/<instance_id> 
+
+14. Stop a running target VM on AWS 
+
+curl -u admin:supersecret -XPUT http://localhost:3000/v1/migrations/aws/vms/<instance-id>/stop
+
+15. Start a stopped target VM on AWS 
+
+curl -u admin:supersecret -XPUT http://localhost:3000/v1/migrations/aws/vms/<instance-id>/start
+
+16. Terminate a running/stopped target VM on AWS 
+
+curl -u admin:supersecret -XPUT http://localhost:3000/v1/migrations/aws/vms/<instance-id>/terminate
+
+17. Create a Salt States export
+
+curl -u admin:supersecret -H "Content-Type: application/json" -d @inspection_export.json -XPUT http://localhost:3000/v1/machines/source/inspections/53/exports/1
+
+18. List exports
+
+curl -u admin:supersecret -H "Content-Type: application/json" http://localhost:3000/v1/machines/source/inspections/53/exports | python -mjson.tool
+
+19. Re-export with new excludes
+
+curl -u admin:supersecret -H "Content-Type: application/json" -d @inspection_export.json -XPUT http://localhost:3000/v1/machines/source/inspections/53/exports/1
+
+20. Show an export
+
+curl -u admin:supersecret -H "Content-Type: application/json" http://localhost:3000/v1/machines/source/inspections/53/exports/1
+
+21. Delete an export
+
+curl -u admin:supersecret -H "Content-Type: application/json" -XDELETE http://localhost:3000/v1/machines/source/inspections/53/exports/1
+
+22. Download the tgz archive of an export
+
+curl -u admin:supersecret -H "Content-Type: application/json" http://localhost:3000/v1/machines/source/inspections/53/exports/1/archive --output source_machine_salt_states.tgz
+
+23. Create migration plan for AWS VM
+
+curl -u admin:supersecret -H "Content-Type: application/json" -d @aws_plan.json http://localhost:3000/v1/migrations/aws/vms/foo/plans
+
+24. List migration plans for AWS VM
+
+curl -u admin:supersecret -H "Content-Type: application/json" http://localhost:3000/v1/migrations/aws/vms/foo/plans | python -mjson.tool
+
+25. Show a migration plan for AWS VM
+
+curl -u admin:supersecret -H "Content-Type: application/json" http://localhost:3000/v1/migrations/aws/vms/foo/plans/1 | python -mjson.tool
+
+26. Delete a migration plan for AWS VM
+
+curl -u admin:supersecret -H "Content-Type: application/json" -XDELETE http://localhost:3000/v1/migrations/aws/vms/foo/plans/6

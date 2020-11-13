@@ -1,0 +1,5 @@
+{"inspection_export": {
+  "export_type": "salt_states",
+  "unmanaged_files_excludes": "/etc/foo\n/foo/bar*"
+}}
+

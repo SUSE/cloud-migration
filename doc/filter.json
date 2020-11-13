@@ -1,0 +1,5 @@
+{"inspection_filter": {
+  "scope": "unmanaged_file",
+  "definition": "name=/etc/ssh/abc*"
+}}
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  migrations_aws_vm: 
+  inspection_export: 
+  status: 1
+  notes: MyString
+  description: MyString
+
+two:
+  migrations_aws_vm: 
+  inspection_export: 
+  status: 1
+  notes: MyString
+  description: MyString

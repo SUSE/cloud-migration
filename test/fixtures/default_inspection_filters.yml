@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scope: MyString
+  definition: MyString
+  enable: false
+  description: MyString
+
+two:
+  scope: MyString
+  definition: MyString
+  enable: false
+  description: MyString

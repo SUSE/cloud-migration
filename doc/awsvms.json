@@ -1,0 +1,9 @@
+{"migrations_aws_vm": {
+     "region": "us-east-2",
+     "image_id": "ami-03f4c416f489586a3",
+     "instance_type": "t2.micro",
+     "key_name": "cjain",
+     "availability_zone": "us-east-2a",
+     "iam_role": "arn:aws:iam::810320120389:instance-profile/cm-launch-instance"
+}}
+

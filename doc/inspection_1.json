@@ -1,0 +1,9 @@
+{"inspection": {
+    "scopes": ["unmanaged_files"],
+    "notes": "Inspection notes blah blah blah",
+    "filters": [
+      {"scope": "unmanaged_files", "definition": "name=/etc/foo"},
+      {"scope": "unmanaged_files", "definition": "name=/root/bar"}
+    ]
+}}
+
