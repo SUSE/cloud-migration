@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/guangyee/machinery.git
-  revision: 75c1ffa8c6e8d77ad27ae0edddc9141620be419f
+  revision: 1dd1a5befffd53967c822b8a0976b3a92fb22744
   branch: salt_states
   specs:
     machinery-tool (1.24.1)
