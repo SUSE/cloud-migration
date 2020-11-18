@@ -32,7 +32,7 @@ do the following:
    Cloud Migration REST API Service will automatically start the migration
    process in the backgroup. The migration process is asynchronous.
 
-See `doc/curl_examples.txt <docs/curl_examples.txt>`_ for REST API examples.
+See `doc/curl_examples.txt <doc/curl_examples.txt>`_ for REST API examples.
 
 =======================
 Development Environment
