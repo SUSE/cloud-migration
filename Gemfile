@@ -31,7 +31,7 @@ gem 'puma', '~> 3.7'
 # https://github.com/SUSE/machinery
 #gem 'machinery-tool', '~> 1.23.0', require: 'machinery'
 #gem 'machinery-tool', require: 'machinery', :path => '/tmp/machinery'
-gem 'machinery-tool', require: 'machinery', git: 'https://github.com/guangyee/machinery.git', branch: 'salt_states'
+gem 'machinery-tool', require: 'machinery', git: 'https://github.com/SUSE/machinery.git', branch: 'master'
 
 # Use net-ssh for tasks not included in machinery
 gem 'net-ssh'
