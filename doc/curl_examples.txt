@@ -52,7 +52,7 @@ If you want to use iam role to connect to aws, toggel the flag config.aws_iam_au
 
 11. Create the target VM on AWS Cloud Provider
 
-curl -u admin:supersecret -H "Content-Type: application/json" -d @awsvm.json http://localhost:3000/v1/migrations/aws/vms
+curl -u admin:supersecret -H "Content-Type: application/json" -d @awsvms.json http://localhost:3000/v1/migrations/aws/vms
 
 12. List the target VMs 
 
@@ -76,7 +76,7 @@ curl -u admin:supersecret -XPUT http://localhost:3000/v1/migrations/aws/vms/<ins
 
 17. Create a Salt States export
 
-curl -u admin:supersecret -H "Content-Type: application/json" -d @inspection_export.json -XPUT http://localhost:3000/v1/machines/source/inspections/53/exports/1
+curl -u admin:supersecret -H "Content-Type: application/json" -d @inspection_export.json -XPOST http://localhost:3000/v1/machines/source/inspections/53/exports
 
 18. List exports
 
