@@ -21,7 +21,7 @@ include CloudUtils
 require 'aws-sdk-ec2'
 require 'abstract_method'
 
-  attr_accessor :image_id, :instance_type, :key_name, :subnet_id, :security_id, :availability_zone, :vpc_id, :iam_role, :secret_file_path 
+  attr_accessor :instance_name, :image_id, :instance_type, :key_name, :subnet_id, :security_id, :availability_zone, :vpc_id, :iam_role, :secret_file_path 
   attr_accessor :instance_id, :salt_minion, :region
 
   def connect_using_config
@@ -68,7 +68,9 @@ require 'abstract_method'
  
   def create_instance 
     connect 
-    instance_name = CloudUtils.generate_instance_name('cm-')
+    if @instance_name.nil?
+       @instance_name = CloudUtils.generate_instance_name('cm-')
+    end
    
     kwargs = {
       image_id: @image_id,
@@ -108,7 +110,8 @@ require 'abstract_method'
 # Wait for the instance to be created, running, and passed status checks
     wait_for_instances(:instance_status_ok, [instance[0].id])
 
-    instance.batch_create_tags({ tags: [{ key: 'Name', value: instance_name }]})
+    instance.batch_create_tags({ tags: [{ key: 'Name', value: @instance_name }]})
+
     @instance_id = instance[0].id
     @salt_minion = instance[0].private_dns_name
   end

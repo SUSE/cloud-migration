@@ -8,6 +8,7 @@ class MigrationsAwsVm < ApplicationRecord
   def create_aws_vm
     puts "Creating"
     aws = AWSProvider.new
+    aws.instance_name = instance_name
     aws.region = region
     aws.image_id = image_id 
     aws.instance_type = instance_type 
@@ -18,6 +19,7 @@ class MigrationsAwsVm < ApplicationRecord
     aws.create_instance
     self.instance_id = aws.instance_id
     self.salt_minion = aws.salt_minion
+    self.instance_name = aws.instance_name
   end
 
   # Enables routing on instance_id instead of id for generated routes

@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20201109201903) do
 
   create_table "migrations_aws_vms", force: :cascade do |t|
     t.string "instance_id"
+    t.string "instance_name"
     t.string "region"
     t.string "image_id"
     t.string "instance_type"

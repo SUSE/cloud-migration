@@ -50,7 +50,8 @@ DefaultInspectionFilter.create!(scope: 'unmanaged_files',
                                 definition: 'name=/var/lib/dpkg')
 
 # TODO(gyee): remove the MigrationsAwsVms data. This is for testing only.
-MigrationsAwsVm.create!(instance_id: 'foo', image_id: 'test_image',
+MigrationsAwsVm.create!(instance_id: 'foo', instance_name: 'test',
+                        image_id: 'test_image',
                         instance_type: 'aws', key_name: 'key',
                         subnet_id: '1', security_id: '1',
                         availability_zone: 'us-west', vpc_id: '1',

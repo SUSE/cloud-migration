@@ -1,4 +1,5 @@
 {"migrations_aws_vm": {
+     "instance_name": "test",
      "region": "us-east-2",
      "image_id": "ami-03f4c416f489586a3",
      "instance_type": "t2.micro",

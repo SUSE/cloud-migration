@@ -2,6 +2,7 @@
 
 one:
   instance_id: MyString
+  instance_name: MyString
   region: MyString
   image_id: MyString
   instance_type: MyString
@@ -15,6 +16,7 @@ one:
 
 two:
   instance_id: MyString
+  instance_name: MyString
   region: MyString
   image_id: MyString
   instance_type: MyString
