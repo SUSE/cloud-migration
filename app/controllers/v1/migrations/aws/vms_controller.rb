@@ -54,7 +54,7 @@ class V1::Migrations::Aws::VmsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def awsvms_params
       params.require(:migrations_aws_vm).permit(
-        :region, :image_id, :instance_type, :key_name, :availability_zone, :iam_role, :security_id, :subnet_id, :vpc_id
+        :instance_name, :region, :image_id, :instance_type, :key_name, :availability_zone, :iam_role, :security_id, :subnet_id, :vpc_id
       )
     end
 end

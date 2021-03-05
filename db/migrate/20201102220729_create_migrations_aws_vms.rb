@@ -2,6 +2,7 @@ class CreateMigrationsAwsVms < ActiveRecord::Migration[5.1]
   def change
     create_table :migrations_aws_vms do |t|
       t.string :instance_id
+      t.string :instance_name
       t.string :region
       t.string :image_id
       t.string :instance_type
